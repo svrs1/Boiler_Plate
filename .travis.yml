@@ -1,0 +1,16 @@
+language: java
+install: true
+
+jdk:
+  - openjdk11
+
+before_install:
+  - chmod +x mvnw
+
+jobs:
+  include:
+    - stage: Test
+      script: ./mvnw clean test
+
+notifications:
+  email: houarizegai14@gmail.com
